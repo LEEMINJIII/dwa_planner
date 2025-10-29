@@ -401,8 +401,6 @@ public:
   std::vector<State>
   dwa_planning(const Eigen::Vector3d &goal, std::vector<std::pair<std::vector<State>, bool>> &trajectories);
 
-  void create_obs_list(const sensor_msgs::LaserScan &scan);
-
 
 protected:
   std::string global_frame_;
