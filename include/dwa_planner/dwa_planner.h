@@ -401,6 +401,9 @@ public:
   std::vector<State>
   dwa_planning(const Eigen::Vector3d &goal, std::vector<std::pair<std::vector<State>, bool>> &trajectories);
 
+  void create_obs_list(const sensor_msgs::LaserScan &scan);
+
+
 protected:
   std::string global_frame_;
   std::string robot_frame_;
@@ -473,6 +476,7 @@ protected:
   std_msgs::Bool has_finished_;
 
   tf::TransformListener listener_;
+
 };
 
 #endif  // DWA_PLANNER_DWA_PLANNER_H
